@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package gosample.movie.library;
+
+option go_package = ".;pb";
+option java_package = "com.grpc.movie.library";
+option java_multiple_files = true;
+
+message OriginalInfo {
+    string originalTitle = 1;
+    string originalLanguage = 2;
+    string originalBudget = 3;
+}

@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package gosample.movie.library;
+
+option go_package = ".;pb";
+option java_package = "com.grpc.movie.library";
+option java_multiple_files = true;
+
+message CastCrew {
+    repeated string actors = 1;
+    repeated string writers = 2;
+    repeated string producers = 3;
+    repeated string productionHouse = 4;
+    repeated string musicComposition = 5; 
+}

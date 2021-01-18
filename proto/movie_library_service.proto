@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package gosample.movie.library;
+
+option go_package = ".;pb";
+option java_package = "com.grpc.movie.library";
+option java_multiple_files = true;
+
+import "movie_message.proto";
+
+message AddMovieRequest {
+    Movie movie = 1;
+}
+
+message AddMovieResponse {
+    string id = 1;
+}
+
+service MovieLibraryService {
+    rpc SaveMovie(AddMovieRequest) returns (AddMovieResponse);
+}
